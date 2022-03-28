@@ -1,5 +1,5 @@
-const User = require('./User')
+const User = require('./User.js')
 
-// relationships go here
+// your relationships go here...
 
-module.export = { User }
+module.exports = { User }

@@ -1,9 +1,9 @@
-const passLoSeq = require('passport-local-sequelize')
+const pls = require('passport-local-sequelize')
 const { DataTypes } = require('sequelize')
 const sequelize = require('../db')
 
-const User = passLoSeq.defineUser(sequelize, {
-  // columns go here
+const User = pls.defineUser(sequelize, {
+  // your columns here...
 })
 
 module.exports = User
