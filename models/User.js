@@ -3,7 +3,11 @@ const { DataTypes } = require('sequelize')
 const sequelize = require('../db')
 
 const User = pls.defineUser(sequelize, {
-  // your columns here...
+  // requirements for username field
+  username: {
+    type: DataTypes.STRING,
+    allowNull: false
+  }
 })
 
 module.exports = User
