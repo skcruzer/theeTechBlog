@@ -1,5 +1,8 @@
 const User = require('./User.js')
+const Post = require('./Post.js')
 
-// your relationships go here...
+// relationship between user and post models
+User.hasMany(Post, { foreignKey: 'uid' })
+Post.belongsTo(User, { foreignKey: 'uid' })
 
-module.exports = { User }
+module.exports = { User, Post }
