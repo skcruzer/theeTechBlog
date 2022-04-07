@@ -1,6 +1,6 @@
 const User = require('./User.js')
 const Post = require('./Post.js')
-const Comment = require('./Comment.js')
+const Review = require('./Review.js')
 
 // relationship between user and post models
 User.hasMany(Post, { 
@@ -10,11 +10,11 @@ Post.belongsTo(User, {
   foreignKey: 'uid' 
 })
 
-Post.hasMany(Comment, {
-  foreignKey: 'uid'
+Post.hasMany(Review, {
+  foreignKey: 'pid'
 })
-Comment.belongsTo(Post, {
-  foreignKey: 'uid'
+Review.belongsTo(Post, {
+  foreignKey: 'pid'
 })
 
-module.exports = { User, Post, Comment }
+module.exports = { User, Post, Review }
