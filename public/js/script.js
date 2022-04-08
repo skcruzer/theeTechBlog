@@ -28,7 +28,7 @@ document.addEventListener('click', event => {
 })
 
 // submit post button
-document.getElementById('submit').addEventListener('click', event => {
+document.getElementById('submitPost').addEventListener('click', event => {
   let newPost = {
     title: document.getElementById('title').value,
     body: document.getElementById('body').value

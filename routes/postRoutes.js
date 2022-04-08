@@ -8,7 +8,7 @@ router.get('/posts', passport.authenticate('jwt'), async function (req, res) {
   res.json(posts)
 })
 
-// get one post
+// get one post by id
 router.get('/posts/:id', passport.authenticate('jwt'), async function (req, res) {
   const post = await Post.findOne({ where: {id: req.params.id}, include: [User, Review] })
   res.json(post)
