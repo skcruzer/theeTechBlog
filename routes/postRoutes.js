@@ -1,11 +1,17 @@
 const router = require('express').Router()
-const { Post, User } = require('../models')
+const { Post, User, Review } = require('../models')
 const passport = require('passport')
 
 // get all posts
 router.get('/posts', passport.authenticate('jwt'), async function (req, res) {
   const posts = await Post.findAll({ include: [User] })
   res.json(posts)
+})
+
+// get one post
+router.get('/posts/:id', passport.authenticate('jwt'), async function (req, res) {
+  const post = await Post.findOne({ where: {id: req.params.id}, include: [User, Review] })
+  res.json(post)
 })
 
 // create a post
