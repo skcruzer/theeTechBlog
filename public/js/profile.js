@@ -12,7 +12,8 @@ axios.get('api/users/profile', {
       document.getElementById('posts').innerHTML += `
     <h4 class="post" data-post="${post.id}"> ${post.title} </a>
     <h5> ${post.body} </h5>
-    <button class="btn btn-primary me-md-2 delete" type="button">Delete</button>
+    <button data-post="${post.id}" class="btn btn-primary me-md-2 delete" type="button">Delete</button>
+    <button data-post="${post.id}" class="btn btn-primary me-md-2 edit" type="button">Edit</button>
     <hr>
     `
     })
@@ -25,5 +26,23 @@ document.addEventListener('click', event => {
     let postId = event.target.dataset.post
     localStorage.setItem('post', postId)
     window.location = 'post.html'
+  }
+  // delete post button
+  if (event.target.classList.contains('delete')) {
+    let postId = event.target.dataset.post
+    axios.delete(`/api/posts/${postId}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+    .then(res => {
+      console.log(res.data)
+    })
+  }
+  // edit post button
+  if (event.target.classList.contains('edit')) {
+    let postId = event.target.dataset.post
+    localStorage.setItem('editPost', postId)
+    window.location = 'edit.html'
   }
 })

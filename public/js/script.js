@@ -44,3 +44,9 @@ document.getElementById('submitPost').addEventListener('click', event => {
     console.log(res.data)
   })
 })
+
+// logout button
+document.getElementById('logout').addEventListener('click', event => {
+  localStorage.removeItem('token')
+  window.location = 'login.html'
+})
