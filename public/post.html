@@ -11,17 +11,25 @@
 <body>
   
 <div class="container">
+  <!-- post title and body -->
   <h1 id="title"></h1>
   <h5 id="body"></h5>
   <div class="row">
+    <!-- form for user to input comment about post -->
     <div class="form-floating">
       <textarea class="form-control" id="commentBody" placeholder="Leave a comment here"></textarea>
+      <!-- floating text in input form -->
       <label for="floatingTextarea">Comment</label>
     </div>
   </div>
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <!-- submit comment button -->
     <button class="btn btn-primary me-md-2" id="submitComment" type="button" style="margin: 5px;">Submit Comment</button>
   </div>
+</div>
+<!-- previous comments on post -->
+<div class="row">
+  <div id="comments"></div>
 </div>
 
 
