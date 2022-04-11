@@ -34,6 +34,6 @@ passport.use(new JWTStrategy({
 
 app.use(require('./routes'))
 
-require('./db').sync()
+require('./config/connection').sync()
   .then(() => app.listen(process.env.PORT || 3001))
   .catch(err => console.log(err))

@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS theeTechBlog_db;
+
+CREATE DATABASE theeTechBlog_db;
