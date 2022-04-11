@@ -10,10 +10,10 @@ axios.get('api/users/profile', {
 
     posts.forEach(post => {
       document.getElementById('posts').innerHTML += `
-    <h4 class="post" data-post="${post.id}"> ${post.title} </a>
+    <h4 class="post" data-post="${post.id}" id="proTit"> ${post.title} </a>
     <h5> ${post.body} </h5>
-    <button data-post="${post.id}" class="btn btn-primary me-md-2 delete" type="button">Delete</button>
-    <button data-post="${post.id}" class="btn btn-primary me-md-2 edit" type="button">Edit</button>
+    <button data-post="${post.id}" class="btn btn-primary me-md-2 edit" id="editBtn" type="button">Edit</button>
+    <button data-post="${post.id}" class="btn btn-primary me-md-2 delete"  id="editBtn" type="button">Delete</button>
     <hr>
     `
     })

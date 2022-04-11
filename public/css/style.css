@@ -1,12 +1,46 @@
+* {
+
+}
+
 #website {
   color: white;
   font-weight: 600;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 
-#navbarMenu {
+#navbarMenu, #logout {
   color: whitesmoke;
+  
 }
+
+#pageHead {
+  margin: 4rem;
+  font-weight: 700;
+}
+
+
+
+#footer {
+  padding-top: 1rem;
+}
+
+/* styling for profile.html */
+#proTit {
+  font-style: italic;
+  color: darkblue;
+}
+
+#posts {
+  margin: auto;
+}
+
+#editBtn {
+  margin-top: .2rem;
+  border: solid black;
+}
+
+
+
 
 
 @media (max-width: 768px) {
