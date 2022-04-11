@@ -38,3 +38,9 @@ document.getElementById('submitComment').addEventListener('click', event => {
     console.log(res)
   })
 })
+
+// logout button
+document.getElementById('logout').addEventListener('click', event => {
+  localStorage.removeItem('token')
+  window.location = 'login.html'
+})

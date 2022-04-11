@@ -21,3 +21,9 @@ document.getElementById('register').addEventListener('click', event => {
     })
 
 })
+
+// // logout button
+// document.getElementById('logout').addEventListener('click', event => {
+//   localStorage.removeItem('token')
+//   window.location = 'login.html'
+// })

@@ -18,3 +18,9 @@ document.getElementById('submitPost').addEventListener('click', event => {
     window.location = 'profile.html'
   })
 })
+
+// logout button
+document.getElementById('logout').addEventListener('click', event => {
+  localStorage.removeItem('token')
+  window.location = 'login.html'
+})

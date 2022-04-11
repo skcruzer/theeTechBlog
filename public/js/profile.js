@@ -46,3 +46,9 @@ document.addEventListener('click', event => {
     window.location = 'edit.html'
   }
 })
+
+// logout button
+document.getElementById('logout').addEventListener('click', event => {
+  localStorage.removeItem('token')
+  window.location = 'login.html'
+})
