@@ -35,7 +35,10 @@
   border: solid black;
 }
 
-
+/* styling for post.html */
+#comments {
+  margin-left: 7rem;
+}
 
 
 
