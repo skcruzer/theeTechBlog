@@ -6,6 +6,11 @@ const passport = require('passport')
 const { User, Post } = require('./models')
 const { Strategy: JWTStrategy, ExtractJwt } = require('passport-jwt')
 const { sync } = require('./models/Post')
+
+const session = require('express-session')
+const sequelize = require('./config/connection')
+const SequelizeStore = require('connect-session-sequelize')(session.Store)
+
 const app = express()
 
 app.use(express.static(join(__dirname, 'public')))
@@ -14,6 +19,18 @@ app.use(express.json())
 
 app.use(passport.initialize())
 app.use(passport.session())
+
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
+app.use(session(sess))
 
 passport.use(User.createStrategy())
 passport.serializeUser((user, done) => {
