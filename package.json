@@ -1,7 +1,7 @@
 {
   "name": "boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "theeTechBlog",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skcruzer/boilerplate.git"
+    "url": "git+https://github.com/skcruzer/theeTechBlog.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/skcruzer/boilerplate/issues"
+    "url": "https://github.com/skcruzer/theeTechBlog/issues"
   },
-  "homepage": "https://github.com/skcruzer/boilerplate#readme",
+  "homepage": "https://github.com/skcruzer/theeTechBlog#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.3",
