@@ -5,6 +5,7 @@ const { join } = require('path')
 const passport = require('passport')
 const { User, Post } = require('./models')
 const { Strategy: JWTStrategy, ExtractJwt } = require('passport-jwt')
+const { sync } = require('./models/Post')
 const app = express()
 
 app.use(express.static(join(__dirname, 'public')))
@@ -35,5 +36,5 @@ passport.use(new JWTStrategy({
 app.use(require('./routes'))
 
 require('./config/connection').sync()
-  .then(() => app.listen(process.env.JAWSDB_URL || process.env.PORT || 3001))
+  .then(() => app.listen(process.env.PORT || 3001))
   .catch(err => console.log(err))
