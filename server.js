@@ -35,5 +35,5 @@ passport.use(new JWTStrategy({
 app.use(require('./routes'))
 
 require('./config/connection').sync()
-  .then(() => app.listen(process.env.PORT || 3001))
+  .then(() => app.listen(process.env.JAWSDB_URL || process.env.PORT || 3001))
   .catch(err => console.log(err))
