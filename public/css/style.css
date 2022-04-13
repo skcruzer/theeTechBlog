@@ -4,6 +4,10 @@
   padding-top: 3rem;
 }
 
+#welcome, #title, #body {
+  margin-bottom: 2rem;
+}
+
 #navbarMenu, #logout {
   color: whitesmoke;
   

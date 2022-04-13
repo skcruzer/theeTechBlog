@@ -19,7 +19,7 @@
 <p> This application requires a local <code>MySQL</code> server. Simply clone this repo to your local device and run the command npm i to install <code>Node</code> packages. </p>
 
 ## <h3 id='usage'>Usage</h3>
-<p> This application is deployed on Heroku, you can access by clicking on the following link: <a href='https://thee-tech-blog.herokuapp.com/'target='_blank'>theeTechBlog</a> . Create a username and password to tech blog. </p>
+<p> This application is deployed on Heroku, you can access by clicking on the following link: <a href='https://thee-tech-blog.herokuapp.com/register.html'target='_blank'>theeTechBlog</a> . Create a username and password to tech blog. </p>
 
 ## <h3 id='contribution'>Contributing</h3>
 <p> Functionalities are still being added to this application. If you would like to contribute or provide any feedback, please contact me. You can find contact information below in the <a href='#questions'>Questions</a> section. </p>
